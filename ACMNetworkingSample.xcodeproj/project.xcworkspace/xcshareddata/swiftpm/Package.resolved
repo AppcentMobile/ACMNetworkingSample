@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "acmnetworking",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppcentMobile/ACMNetworking.git",
+      "state" : {
+        "revision" : "45f7138b74b47e1876e3e575ededd42a4a7b5113",
+        "version" : "1.0.3"
+      }
+    }
+  ],
+  "version" : 2
+}

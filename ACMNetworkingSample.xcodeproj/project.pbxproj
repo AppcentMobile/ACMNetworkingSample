@@ -13,6 +13,12 @@
 		670C94BA29C8E36F00426EEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670C94B829C8E36F00426EEB /* Main.storyboard */; };
 		670C94BC29C8E37000426EEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 670C94BB29C8E37000426EEB /* Assets.xcassets */; };
 		670C94BF29C8E37000426EEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670C94BD29C8E37000426EEB /* LaunchScreen.storyboard */; };
+		670C94CB29C8E81E00426EEB /* AddProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C94CA29C8E81E00426EEB /* AddProductResponse.swift */; };
+		670C94CD29C8E87600426EEB /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C94CC29C8E87600426EEB /* ProductResponse.swift */; };
+		670C94D129C8E8BA00426EEB /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C94D029C8E8BA00426EEB /* BaseViewModel.swift */; };
+		670C94D429C8E8DF00426EEB /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C94D329C8E8DF00426EEB /* ProductsViewModel.swift */; };
+		6777726C29C8EB1B00661FDD /* ACMNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 6777726B29C8EB1B00661FDD /* ACMNetworking */; };
+		6777727029C8ED4600661FDD /* ACMConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6777726F29C8ED4600661FDD /* ACMConfig.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,11 @@
 		670C94BB29C8E37000426EEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		670C94BE29C8E37000426EEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		670C94C029C8E37000426EEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		670C94CA29C8E81E00426EEB /* AddProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductResponse.swift; sourceTree = "<group>"; };
+		670C94CC29C8E87600426EEB /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
+		670C94D029C8E8BA00426EEB /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		670C94D329C8E8DF00426EEB /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		6777726F29C8ED4600661FDD /* ACMConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ACMConfig.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6777726C29C8EB1B00661FDD /* ACMNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,68 @@
 		670C94B129C8E36F00426EEB /* ACMNetworkingSample */ = {
 			isa = PBXGroup;
 			children = (
-				670C94B229C8E36F00426EEB /* AppDelegate.swift */,
-				670C94B429C8E36F00426EEB /* SceneDelegate.swift */,
-				670C94B629C8E36F00426EEB /* ViewController.swift */,
+				670C94C929C8E81600426EEB /* Model */,
+				670C94C829C8E7FC00426EEB /* Start */,
+				670C94C729C8E7F700426EEB /* ViewModels */,
+				670C94C629C8E7E900426EEB /* ViewControllers */,
 				670C94B829C8E36F00426EEB /* Main.storyboard */,
 				670C94BB29C8E37000426EEB /* Assets.xcassets */,
 				670C94BD29C8E37000426EEB /* LaunchScreen.storyboard */,
 				670C94C029C8E37000426EEB /* Info.plist */,
+				6777726F29C8ED4600661FDD /* ACMConfig.plist */,
 			);
 			path = ACMNetworkingSample;
+			sourceTree = "<group>";
+		};
+		670C94C629C8E7E900426EEB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				670C94B629C8E36F00426EEB /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		670C94C729C8E7F700426EEB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				670C94D229C8E8D300426EEB /* Products */,
+				670C94CF29C8E8AE00426EEB /* Base */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		670C94C829C8E7FC00426EEB /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				670C94B229C8E36F00426EEB /* AppDelegate.swift */,
+				670C94B429C8E36F00426EEB /* SceneDelegate.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		670C94C929C8E81600426EEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				670C94CA29C8E81E00426EEB /* AddProductResponse.swift */,
+				670C94CC29C8E87600426EEB /* ProductResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		670C94CF29C8E8AE00426EEB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				670C94D029C8E8BA00426EEB /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		670C94D229C8E8D300426EEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				670C94D329C8E8DF00426EEB /* ProductsViewModel.swift */,
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +148,9 @@
 			dependencies = (
 			);
 			name = ACMNetworkingSample;
+			packageProductDependencies = (
+				6777726B29C8EB1B00661FDD /* ACMNetworking */,
+			);
 			productName = ACMNetworkingSample;
 			productReference = 670C94AF29C8E36F00426EEB /* ACMNetworkingSample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +179,9 @@
 				Base,
 			);
 			mainGroup = 670C94A629C8E36F00426EEB;
+			packageReferences = (
+				6777726A29C8EB1B00661FDD /* XCRemoteSwiftPackageReference "ACMNetworking" */,
+			);
 			productRefGroup = 670C94B029C8E36F00426EEB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6777727029C8ED4600661FDD /* ACMConfig.plist in Resources */,
 				670C94BF29C8E37000426EEB /* LaunchScreen.storyboard in Resources */,
 				670C94BC29C8E37000426EEB /* Assets.xcassets in Resources */,
 				670C94BA29C8E36F00426EEB /* Main.storyboard in Resources */,
@@ -138,9 +210,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670C94CB29C8E81E00426EEB /* AddProductResponse.swift in Sources */,
+				670C94CD29C8E87600426EEB /* ProductResponse.swift in Sources */,
+				670C94D429C8E8DF00426EEB /* ProductsViewModel.swift in Sources */,
 				670C94B729C8E36F00426EEB /* ViewController.swift in Sources */,
 				670C94B329C8E36F00426EEB /* AppDelegate.swift in Sources */,
 				670C94B529C8E36F00426EEB /* SceneDelegate.swift in Sources */,
+				670C94D129C8E8BA00426EEB /* BaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +432,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6777726A29C8EB1B00661FDD /* XCRemoteSwiftPackageReference "ACMNetworking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppcentMobile/ACMNetworking.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6777726B29C8EB1B00661FDD /* ACMNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6777726A29C8EB1B00661FDD /* XCRemoteSwiftPackageReference "ACMNetworking" */;
+			productName = ACMNetworking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 670C94A729C8E36F00426EEB /* Project object */;
 }
